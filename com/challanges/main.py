@@ -1,3 +1,6 @@
+from ast import List
+
+
 def roman_to_int(s):
     roman_num = s
     sum = 0
@@ -38,3 +41,15 @@ def long_prefix(v):
                 return ans
             ans+=first[i]
         return ans 
+
+
+
+
+def remove_duplicates(nums: list[int]) -> int: 
+        j = 1
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                nums[j] = nums[i]
+                j += 1
+        return j
+
