@@ -1,4 +1,4 @@
-from linkedLists import Node
+from com.data_struct.linked_lists.linkedLists import Node
 
 def roman_to_int(s):
     roman_num = s
