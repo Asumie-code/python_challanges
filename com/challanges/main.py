@@ -1,5 +1,4 @@
-from ast import List
-
+from linkedLists import Node
 
 def roman_to_int(s):
     roman_num = s
@@ -53,3 +52,6 @@ def remove_duplicates(nums: list[int]) -> int:
                 j += 1
         return j
 
+
+n = Node('something')
+print(n.value)
