@@ -48,6 +48,23 @@ class LinkedList:
         self._length += 1
         return True
 
+    
+    def prepand(self, val, checkDuplicates = False): 
+        if checkDuplicates and self._isDuplicate(val): 
+            return False
+        
+        newItem = Node(val)
+
+        if self._head: 
+            self._head = self._tail = newItem
+        else: 
+            newItem.next = self._head
+            self._head.prev = newItem
+            self._head = newItem
+
+        self._length += 1
+        return True
+
 
     def toList(self): 
         return [*self]
