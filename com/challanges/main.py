@@ -1,4 +1,4 @@
-from com.data_struct.linked_lists.linkedLists import Node
+
 
 def roman_to_int(s):
     roman_num = s
@@ -53,5 +53,38 @@ def remove_duplicates(nums: list[int]) -> int:
         return j
 
 
-n = Node('something')
-print(n.value)
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def mergeTwoLists(list1, list2): 
+    lis = []
+
+    current = list1
+    while current != None: 
+        lis.append(current.val)
+        current = current.next
+   
+    current = list2
+    while current != None: 
+         lis.append(current.val)
+         current = current.next
+    
+    lis.sort()
+ 
+    current = result = ListNode()
+    for i in lis: 
+        current.next = ListNode(i)
+        current = current.next
+
+    return result.next
+       
+
+
+    
+    
+    
+        
