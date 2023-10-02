@@ -83,6 +83,18 @@ def mergeTwoLists(list1, list2):
     return result.next
        
 
+def removeElement(nums, val): 
+        index = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[index] = nums[i]
+                index += 1
+
+        return index
+
+            
+  
+
 
     
     

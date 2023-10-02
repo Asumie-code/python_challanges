@@ -44,3 +44,10 @@ def test_mergeTwoLists():
         if current:
             assert current.val == i 
             current = current.next
+
+
+
+
+def test_removeElement(): 
+    assert challanges.removeElement([3,2,2,3], 3) == 2
+    assert challanges.removeElement([0,1,2,2,3,0,4,2], 2) == 5
