@@ -92,6 +92,12 @@ def removeElement(nums, val):
 
         return index
 
+
+def iofo(haystack, needle):
+      if needle not in haystack: return -1 
+      return haystack.find(needle)
+     
+
             
   
 

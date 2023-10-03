@@ -51,3 +51,9 @@ def test_mergeTwoLists():
 def test_removeElement(): 
     assert challanges.removeElement([3,2,2,3], 3) == 2
     assert challanges.removeElement([0,1,2,2,3,0,4,2], 2) == 5
+
+
+
+def test_iofo(): 
+    assert challanges.iofo('sadbutsad', 'sad') == 0 
+    assert challanges.iofo('sadbutsad', 'sado') == -1 
