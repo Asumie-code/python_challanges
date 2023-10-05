@@ -96,6 +96,13 @@ def removeElement(nums, val):
 def iofo(haystack, needle):
       if needle not in haystack: return -1 
       return haystack.find(needle)
+
+
+def searchInsert(nums, target): 
+    for index in range(len(nums)): 
+        if nums[index] >= target: 
+            return index 
+    return len(nums)
      
 
             

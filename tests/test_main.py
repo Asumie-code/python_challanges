@@ -57,3 +57,8 @@ def test_removeElement():
 def test_iofo(): 
     assert challanges.iofo('sadbutsad', 'sad') == 0 
     assert challanges.iofo('sadbutsad', 'sado') == -1 
+
+
+def test_searchInsert(): 
+    assert challanges.searchInsert([1,3,5,6], 5) == 2
+    assert challanges.searchInsert([1,3,5,6], 2) == 1
