@@ -104,6 +104,8 @@ def searchInsert(nums, target):
             return index 
     return len(nums)
      
+def lengthOfLastWord(s): 
+     return len(s.split()[-1])
 
             
   

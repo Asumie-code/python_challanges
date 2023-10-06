@@ -62,3 +62,8 @@ def test_iofo():
 def test_searchInsert(): 
     assert challanges.searchInsert([1,3,5,6], 5) == 2
     assert challanges.searchInsert([1,3,5,6], 2) == 1
+
+
+def test_lengthOfLastWord(): 
+    assert challanges.lengthOfLastWord("hello world") == 5 
+    assert challanges.lengthOfLastWord("  fly me  to  the moon   ") == 4
