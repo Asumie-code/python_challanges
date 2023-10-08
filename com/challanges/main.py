@@ -107,6 +107,47 @@ def searchInsert(nums, target):
 def lengthOfLastWord(s): 
      return len(s.split()[-1])
 
+
+
+def plusOne(digits):
+    #neat solution  
+    # if digits[-1] != 9:
+    # digits[-1] += 1
+    # return digits
+    # num = 0
+    # for el in digits:
+    #     num = num * 10 + el
+    # return [int(i) for i in str(num + 1)]
+
+    digits.reverse()
+    number = 0
+    for index , x in enumerate(digits): 
+        number += x * 10**index 
+    number += 1 
+    plusOne = []
+    while number > 0: 
+        number, remd = divmod(number, 10)
+        plusOne.append(remd)
+    plusOne.reverse()
+    return plusOne
+
+
+def plusOne_in_place_version( digits):
+    if digits == [0]: return [1]
+
+    carry = 1
+    i = len(digits)-1
+    while carry:
+        digits[i] = (carry + digits[i]) % 10
+        if digits[i] == 0: carry = 1
+        else: carry = 0
+        i -= 1
+
+        if i < 0:
+            if carry: digits.insert(0, 1)
+            break
+    return digits
+
             
   
 

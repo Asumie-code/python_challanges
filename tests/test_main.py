@@ -67,3 +67,8 @@ def test_searchInsert():
 def test_lengthOfLastWord(): 
     assert challanges.lengthOfLastWord("hello world") == 5 
     assert challanges.lengthOfLastWord("  fly me  to  the moon   ") == 4
+
+
+def test_plusOne(): 
+    assert challanges.plusOne([1,2,3]) == [1,2,4]
+    assert challanges.plusOne([9]) == [1,0]
