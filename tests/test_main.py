@@ -72,3 +72,8 @@ def test_lengthOfLastWord():
 def test_plusOne(): 
     assert challanges.plusOne([1,2,3]) == [1,2,4]
     assert challanges.plusOne([9]) == [1,0]
+
+
+def test_addBinary(): 
+    assert challanges.addBinary('11', '1') == '100'
+    assert challanges.addBinary('1010', '1011') == '10101'
