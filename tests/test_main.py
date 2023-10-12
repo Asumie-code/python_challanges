@@ -77,3 +77,10 @@ def test_plusOne():
 def test_addBinary(): 
     assert challanges.addBinary('11', '1') == '100'
     assert challanges.addBinary('1010', '1011') == '10101'
+
+
+def test_mysqrt(): 
+    assert challanges.mysqrt(4) == 2
+    assert challanges.mysqrt(8) == 2 
+    assert challanges.mysqrt(0) == 0 
+    assert challanges.mysqrt(9) == 3 

@@ -1,4 +1,5 @@
-
+from math import  trunc
+from random import randint
 
 def roman_to_int(s):
     roman_num = s
@@ -167,6 +168,20 @@ def addBinary(a, b):
     
     return result
 
+
+
+
+def mysqrt(x): 
+        if x == 0: return 0
+        precision = 20 # increase precision increase the time 
+        y = randint(1,x)
+        square = 0
+        while precision > 0:
+            square = 0.5*(y + (x / y) )
+            y = square
+            precision -= 1 
+
+        return trunc(square)
 
 
 
