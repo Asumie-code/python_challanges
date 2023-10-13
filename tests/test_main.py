@@ -84,3 +84,9 @@ def test_mysqrt():
     assert challanges.mysqrt(8) == 2 
     assert challanges.mysqrt(0) == 0 
     assert challanges.mysqrt(9) == 3 
+
+
+
+def test_climbStairs(): 
+    assert challanges.climbStairs(3) == 3
+    assert challanges.climbStairs(4) == 5
