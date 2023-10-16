@@ -1,5 +1,6 @@
 from math import  trunc
 from random import randint
+from typing import Optional
 
 def roman_to_int(s):
     roman_num = s
@@ -189,6 +190,23 @@ def climbStairs( n: int) -> int:
        if n == 0 or n == 1:
            return 1
        return climbStairs(n-1) + climbStairs(n-2)  
+
+
+def deleteDuplicates(head: Optional[ListNode]) -> Optional[ListNode]:
+    s = set()
+
+    current = head 
+    while current != None: 
+        s.add(current.val)
+        current = current.next
+    lis = list(s)
+    lis.sort()
+    current = result = ListNode() 
+    for i in lis: 
+        current.next = ListNode(i)
+        current = current.next 
+
+    return result.next
 
 
 

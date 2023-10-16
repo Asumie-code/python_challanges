@@ -90,3 +90,23 @@ def test_mysqrt():
 def test_climbStairs(): 
     assert challanges.climbStairs(3) == 3
     assert challanges.climbStairs(4) == 5
+
+
+def test_deleteDuplicates(): 
+   lis1 = [1,1,2]
+
+   current = dummylis1 = challanges.ListNode()
+   for i in lis1: 
+        current.next = challanges.ListNode(i)
+        current = current.next
+   lis_node_1 = dummylis1.next
+
+   result = challanges.deleteDuplicates(lis_node_1)
+
+   current = result
+   s  = set(lis1)
+   for i in s: 
+       if current: 
+           assert i == current.val
+           current = current.next
+       
