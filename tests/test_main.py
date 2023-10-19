@@ -1,3 +1,4 @@
+from typing import List, Optional
 import com.challanges.main as challanges
 
 
@@ -111,7 +112,12 @@ def test_deleteDuplicates():
            current = current.next
        
 
-def merge(nums1, m, nums2, n): 
-    for i in range(n): 
-        nums1[m + i] = nums2[i]
-    nums1.sort()
+def test_inorderTraversal(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.inorderTraversal(root) == [4,2,5,1,3]
+

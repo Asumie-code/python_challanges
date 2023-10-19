@@ -1,6 +1,6 @@
 from math import  trunc
 from random import randint
-from typing import Optional
+from typing import List, Optional
 
 def roman_to_int(s):
     roman_num = s
@@ -207,6 +207,39 @@ def deleteDuplicates(head: Optional[ListNode]) -> Optional[ListNode]:
         current = current.next 
 
     return result.next
+
+
+
+def merge(nums1, m, nums2, n): 
+    for i in range(n): 
+        nums1[m + i] = nums2[i]
+    nums1.sort()
+
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+
+def inorderTraversal(root: Optional[TreeNode]) -> List[int]:
+    current = root 
+    stack = []
+    result = []
+
+    while True: 
+        if current is not None: 
+            stack.append(current)
+            current = current.left 
+        elif stack: 
+            current = stack.pop()
+            result.append(current.val)
+            current = current.right
+        else: 
+            return result
 
 
 
