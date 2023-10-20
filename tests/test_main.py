@@ -121,3 +121,19 @@ def test_inorderTraversal():
 
     assert challanges.inorderTraversal(root) == [4,2,5,1,3]
 
+
+
+def test_isSameTree(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+    root2  = challanges.TreeNode(1)
+    root2.right = challanges.TreeNode(2)
+
+    root3 = challanges.TreeNode(1)
+    root3.left = challanges.TreeNode(2)
+
+    assert challanges.isSameTree(root , root) == True 
+    assert challanges.isSameTree(root2, root3) == False
