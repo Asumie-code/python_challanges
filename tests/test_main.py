@@ -137,3 +137,22 @@ def test_isSameTree():
 
     assert challanges.isSameTree(root , root) == True 
     assert challanges.isSameTree(root2, root3) == False
+
+
+
+
+def test_isSymmetric(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    root2 = challanges.TreeNode(1)
+    root2.left = challanges.TreeNode(2)
+    root2.right = challanges.TreeNode(2)
+
+
+
+    assert challanges.isSymmetric(root ) == False 
+    assert challanges.isSymmetric(root2) == True

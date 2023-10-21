@@ -255,6 +255,20 @@ def isSameTree(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
     return False
 
 
+def isSymmetric(root: Optional[TreeNode]) -> bool:
+    if root is None: return True
+    def isSameTree(p, q):     
+        if p is None and q is None: 
+            return True 
+        if p is None or q is None: 
+            return False 
+        if p.val == q.val: 
+            return isSameTree(p.left, q.right) and isSameTree(p.right, q.left)
+
+        return False
+    return isSameTree(root.left, root.right)
+
+
             
   
 
