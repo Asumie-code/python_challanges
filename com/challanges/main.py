@@ -268,6 +268,12 @@ def isSymmetric(root: Optional[TreeNode]) -> bool:
         return False
     return isSameTree(root.left, root.right)
 
+def maxDepth(root: Optional[TreeNode]) -> int:
+    if root == None: return 0
+    rightDepth = maxDepth(root.right)
+    leftDepth = maxDepth(root.left)
+    return 1 +  max(rightDepth, leftDepth)
+
 
             
   
