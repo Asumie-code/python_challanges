@@ -173,3 +173,14 @@ def test_maxDepth():
 
     assert challanges.maxDepth(root ) ==  3
     assert challanges.maxDepth(root2) == 2
+
+
+def test_sortedArrayToBST(): 
+    nums  = [1,2,3,4,5]
+    root = challanges.sortedArrayToBST(nums)
+    assert type(root) == challanges.TreeNode
+    rootValues = challanges.inorderTraversal(root)
+
+    for i in rootValues: 
+        assert i in nums
+
