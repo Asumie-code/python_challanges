@@ -287,8 +287,17 @@ def sortedArrayToBST(nums: List[int]) -> Optional[TreeNode]:
         sortedArrayToBST(nums[mid_node + 1 :])
         )
 
+
+
+def Height(root): 
+    if root is None: return 0 
+    leftheight, rightheight = Height(root.left), Height(root.right)
+    if leftheight < 0 or rightheight < 0 or abs(leftheight - rightheight) > 1: 
+        return -1
+    return max(leftheight, rightheight) + 1
             
-  
+def isBalanced(root: Optional[TreeNode]) -> bool: 
+    return Height(root) >= 0
 
 
     

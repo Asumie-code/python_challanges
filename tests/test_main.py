@@ -184,3 +184,13 @@ def test_sortedArrayToBST():
     for i in rootValues: 
         assert i in nums
 
+
+def test_isBalanced(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.isBalanced(root) == True
+
