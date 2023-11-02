@@ -194,3 +194,13 @@ def test_isBalanced():
 
     assert challanges.isBalanced(root) == True
 
+def test_minDepthg(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.minDepth(root) == 2 
+
+

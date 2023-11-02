@@ -299,7 +299,11 @@ def Height(root):
 def isBalanced(root: Optional[TreeNode]) -> bool: 
     return Height(root) >= 0
 
-
+def minDepth(root: Optional[TreeNode]) -> int: 
+    if root is None: return 0 
+    if root.left is None: return minDepth(root.right) + 1 
+    if root.right is None : return minDepth(root.left) + 1 
+    return min(minDepth(root.left), minDepth(root.right)) + 1
     
     
     
