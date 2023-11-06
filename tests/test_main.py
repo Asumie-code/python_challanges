@@ -204,3 +204,14 @@ def test_minDepthg():
     assert challanges.minDepth(root) == 2 
 
 
+
+def test_hasPathSum(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.hasPathSum(root, 7) == True  
+
+

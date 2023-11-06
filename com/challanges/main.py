@@ -306,5 +306,19 @@ def minDepth(root: Optional[TreeNode]) -> int:
     return min(minDepth(root.left), minDepth(root.right)) + 1
     
     
-    
+def hasPathSum(root: Optional[TreeNode], targetSum: int) -> bool:
+      if root is None: return False
+      ans = 0 
+      subSum =  targetSum - root.val 
+
+
+      if subSum == 0 and root.left == None and root.right == None: return True
+
+      if root.left is not None: 
+          ans = ans or hasPathSum(root.left, subSum)  
+
+      if root.right is not None: 
+          ans = ans or hasPathSum(root.right, subSum)  
+      return ans
+
         
