@@ -321,4 +321,18 @@ def hasPathSum(root: Optional[TreeNode], targetSum: int) -> bool:
           ans = ans or hasPathSum(root.right, subSum)  
       return ans
 
-        
+#pascal's triangle 1
+def generate(numRows: int) -> List[List[int]]: 
+    if numRows == 0: 
+        return []
+    if numRows == 1: 
+        return [[1]]
+    
+    prevRows = generate(numRows - 1)
+    newRow = [1] * numRows
+
+    for i in range(1, numRows - 1): 
+        newRow[i] = prevRows[-1][i - 1] + prevRows[-1][i]
+    
+    prevRows.append(newRow)
+    return prevRows
