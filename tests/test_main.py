@@ -218,5 +218,9 @@ def test_hasPathSum():
 
 def test_generate(): 
     assert challanges.generate(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+
+
+def test_getRows(): 
+    assert challanges.getRow(3) == [1,3,3,1]
     
 
