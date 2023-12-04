@@ -222,5 +222,9 @@ def test_generate():
 
 def test_getRows(): 
     assert challanges.getRow(3) == [1,3,3,1]
+
+
+def test_maxProfit(): 
+    assert challanges.maxProfit([7,1,5,3,6,4]) == 5
     
 
