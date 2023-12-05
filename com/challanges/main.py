@@ -361,3 +361,10 @@ def maxProfit(prices: List[int]) -> int:
                 left = right
             right += 1
         return max_profit
+
+
+def singleNumber(nums: List[int]) -> int:
+        for i in range(1, len(nums)): 
+            nums[i] = nums[i] ^ nums[i - 1]
+
+        return nums[-1]

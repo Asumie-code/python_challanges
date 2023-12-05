@@ -228,3 +228,7 @@ def test_maxProfit():
     assert challanges.maxProfit([7,1,5,3,6,4]) == 5
     
 
+
+def test_singleNumber(): 
+    assert challanges.singleNumber([4,1,2,1,2]) == 4
+
