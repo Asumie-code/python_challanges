@@ -232,3 +232,6 @@ def test_maxProfit():
 def test_singleNumber(): 
     assert challanges.singleNumber([4,1,2,1,2]) == 4
 
+def test_isPalindrome(): 
+    assert challanges.isPalindrome("A man, a plan, a canal: Panama") == True
+
