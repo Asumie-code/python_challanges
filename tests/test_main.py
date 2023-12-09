@@ -235,3 +235,14 @@ def test_singleNumber():
 def test_isPalindrome(): 
     assert challanges.isPalindrome("A man, a plan, a canal: Panama") == True
 
+def test_hasCycle(): 
+    lis1 = [3,2,0,-4]
+    current = dummylis1 = challanges.ListNode()
+    for i in lis1: 
+        current.next = challanges.ListNode(i)
+        current = current.next
+        if i == lis1[-1]:
+            current.next = dummylis1.next
+    lis_node_1 = dummylis1.next
+    assert challanges.hasCycle(lis_node_1) == True
+
