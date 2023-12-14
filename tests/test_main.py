@@ -246,3 +246,12 @@ def test_hasCycle():
     lis_node_1 = dummylis1.next
     assert challanges.hasCycle(lis_node_1) == True
 
+def test_preorderTraversal(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.preorderTraversal(root) == [1,2,4,5,3]
+

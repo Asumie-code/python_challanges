@@ -398,3 +398,24 @@ def hasCycle(head: Optional[ListNode]) -> bool:
         if head is fast: 
             return True
     return False
+
+
+
+def preorderTraversal(root: Optional[TreeNode]) -> List[int]:
+    if root == None: return 
+    st = []
+    data = [] 
+    current = root 
+
+    while len(st) or current != None: 
+        while(current != None): 
+            data.append(current.val)
+
+            if current.right != None: 
+                st.append(current.right)
+            current = current.left
+        if len(st) > 0: 
+            current = st[-1]
+            st.pop()
+    
+    return data
