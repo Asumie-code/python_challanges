@@ -255,3 +255,14 @@ def test_preorderTraversal():
 
     assert challanges.preorderTraversal(root) == [1,2,4,5,3]
 
+
+
+def test_postorderTraversal(): 
+    root = challanges.TreeNode(1)
+    root.left = challanges.TreeNode(2)
+    root.right = challanges.TreeNode(3)
+    root.left.left = challanges.TreeNode(4)
+    root.left.right = challanges.TreeNode(5)
+
+    assert challanges.postorderTraversal(root) == [4,5,2,3,1]
+

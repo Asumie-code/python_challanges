@@ -419,3 +419,23 @@ def preorderTraversal(root: Optional[TreeNode]) -> List[int]:
             st.pop()
     
     return data
+
+
+def postorderTraversal( root: Optional[TreeNode]) -> List[int]:
+        stack = []
+        data = []
+        while True: 
+            while(root != None): 
+                stack.append(root)
+                stack.append(root)
+                root = root.left 
+
+            if len(stack) == 0: return data 
+
+            root = stack.pop() 
+
+            if len(stack) > 0 and stack[-1] == root: 
+                root = root.right
+            else: 
+                data.append(root.val)
+                root = None
