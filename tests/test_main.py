@@ -266,3 +266,20 @@ def test_postorderTraversal():
 
     assert challanges.postorderTraversal(root) == [4,5,2,3,1]
 
+
+def test_getIntersectionNode(): 
+    common = challanges.ListNode(15)
+
+    headA = challanges.ListNode(3)
+    headA.next = challanges.ListNode(6)
+    headA.next.next = challanges.ListNode(9)
+    headA.next.next.next = common
+    headA.next.next.next.next = challanges.ListNode(30)
+
+    headB = challanges.ListNode(10)
+    headB.next = common
+    headB.next.next = challanges.ListNode(30)
+
+    assert challanges.getIntersectionNode(headA, headB) == common
+
+
