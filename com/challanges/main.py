@@ -470,3 +470,10 @@ def getIntersectionNode(headA: ListNode, headB: ListNode) -> Optional[ListNode]:
             headB = headB.next
         return None
 ## linked list intersection 
+
+
+def convertToTitle(columnNumber: int) -> str: 
+    if not columnNumber: 
+        return ''
+    columnNumber , remainder = divmod(columnNumber - 1, 26 )
+    return convertToTitle(columnNumber) + chr(65 + remainder)

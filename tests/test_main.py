@@ -282,4 +282,8 @@ def test_getIntersectionNode():
 
     assert challanges.getIntersectionNode(headA, headB) == common
 
+def test_convertToTitle(): 
+    assert challanges.convertToTitle(28) == 'AB'
+    assert challanges.convertToTitle(1) == 'A'
+
 
