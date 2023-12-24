@@ -286,4 +286,5 @@ def test_convertToTitle():
     assert challanges.convertToTitle(28) == 'AB'
     assert challanges.convertToTitle(1) == 'A'
 
-
+def test_majorityElement(): 
+    assert challanges.majorityElement([1,1,1,1,2,4,5,5]) == 1

@@ -477,3 +477,16 @@ def convertToTitle(columnNumber: int) -> str:
         return ''
     columnNumber , remainder = divmod(columnNumber - 1, 26 )
     return convertToTitle(columnNumber) + chr(65 + remainder)
+
+
+def majorityElement(nums: List[int]) -> int: 
+    count = 0 
+    majority = 0 
+    for num in nums: 
+        if count == 0: 
+            majority = num 
+        if num == majority: 
+            count += 1 
+        else: 
+            count -= 1
+    return majority
