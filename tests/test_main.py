@@ -288,3 +288,8 @@ def test_convertToTitle():
 
 def test_majorityElement(): 
     assert challanges.majorityElement([1,1,1,1,2,4,5,5]) == 1
+
+def test_titleToNumber(): 
+    assert challanges.titleToNumber('A') == 1
+    assert challanges.titleToNumber('AB') == 28
+    assert challanges.titleToNumber('ZY') == 701
