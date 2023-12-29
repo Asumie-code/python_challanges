@@ -293,3 +293,7 @@ def test_titleToNumber():
     assert challanges.titleToNumber('A') == 1
     assert challanges.titleToNumber('AB') == 28
     assert challanges.titleToNumber('ZY') == 701
+
+
+def test_reverseBits(): 
+    assert challanges.reverseBits(43261596) == 964176192 

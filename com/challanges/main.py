@@ -496,3 +496,14 @@ def titleToNumber(columnTitle: str) -> int:
     for char in columnTitle: 
         col_num = col_num * 26 +(ord(char) - 64)
     return col_num
+
+
+def reverseBits(n: int) -> int: 
+        result = 0
+        for _ in range(32):
+            result |= n&1
+            result <<= 1
+            n >>= 1
+
+        result >>= 1
+        return result
