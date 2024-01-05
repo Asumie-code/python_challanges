@@ -297,3 +297,6 @@ def test_titleToNumber():
 
 def test_reverseBits(): 
     assert challanges.reverseBits(43261596) == 964176192 
+
+def test_hammingWeight(): 
+    assert challanges.hammingWeight(30) == 4
