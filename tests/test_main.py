@@ -300,3 +300,7 @@ def test_reverseBits():
 
 def test_hammingWeight(): 
     assert challanges.hammingWeight(30) == 4
+
+def test_isHappy(): 
+    assert challanges.isHappy(19) == True
+    assert challanges.isHappy(2) == False
