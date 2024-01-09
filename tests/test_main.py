@@ -304,3 +304,20 @@ def test_hammingWeight():
 def test_isHappy(): 
     assert challanges.isHappy(19) == True
     assert challanges.isHappy(2) == False
+
+
+def test_removeElements(): 
+    headA = challanges.ListNode(3)
+    headA.next = challanges.ListNode(6)
+    headA.next.next = challanges.ListNode(9)
+
+
+    headB = challanges.ListNode(3)
+    headB.next = challanges.ListNode(9)
+    
+    result = challanges.removeElements(headA, 6)
+    curr, currB =  result, headB  
+    while curr: 
+        assert curr.val == currB.val 
+        curr = curr.next 
+        currB = currB.next

@@ -530,3 +530,16 @@ def isHappy(number: int) -> bool:
         seen_numbers.add(number)
         number = pdi_function(number)
     return number == 1
+
+def removeElements(head: Optional[ListNode], val: int) -> Optional[ListNode]: 
+    dummy = ListNode(next=head)
+    prev, curr = dummy, head 
+    while curr: 
+        if curr.val == val: 
+            nxt = curr.next 
+            prev.next = nxt 
+            curr = nxt
+        else: 
+            prev = curr 
+            curr = curr.next
+    return dummy.next
