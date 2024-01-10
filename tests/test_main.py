@@ -321,3 +321,7 @@ def test_removeElements():
         assert curr.val == currB.val 
         curr = curr.next 
         currB = currB.next
+
+def test_isIsomorphic(): 
+    assert challanges.isIsomorphic('paper', 'title') == True 
+    assert challanges.isIsomorphic('foo', 'bar') == False 
