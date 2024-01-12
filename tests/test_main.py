@@ -325,3 +325,33 @@ def test_removeElements():
 def test_isIsomorphic(): 
     assert challanges.isIsomorphic('paper', 'title') == True 
     assert challanges.isIsomorphic('foo', 'bar') == False 
+
+
+def test_reverseList(): 
+    #refactor test 
+    #tldr test against linkedlist objects
+    headA = challanges.ListNode(3)
+    headA.next = challanges.ListNode(6)
+    headA.next.next = challanges.ListNode(9)
+
+    lis1 = []
+    rev_lis1 = []
+    curr = headA 
+    while curr: 
+        lis1.append(curr.val)
+        curr = curr.next 
+    lis1.reverse()
+    rev_headA = challanges.reverseList(headA)
+    curr = rev_headA
+    while curr: 
+        rev_lis1.append(curr.val)
+        curr = curr.next 
+    assert lis1 == rev_lis1
+
+   
+
+    
+
+    
+    
+    
