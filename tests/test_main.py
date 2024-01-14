@@ -351,7 +351,8 @@ def test_reverseList():
    
 
     
-
+def test_containDuplicates(): 
+    assert challanges.containsDuplicate([1,1,1,2,4]) == True 
     
     
     

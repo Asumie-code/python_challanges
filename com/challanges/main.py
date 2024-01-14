@@ -568,3 +568,11 @@ def reverseList( head: Optional[ListNode]) -> Optional[ListNode]:
         new_list = current 
         current = next_node 
     return new_list
+
+
+
+
+
+def containsDuplicate(nums: List[int]) -> bool: 
+    no_repeats = len(set(nums))
+    return no_repeats < len(nums)
