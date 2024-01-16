@@ -353,6 +353,9 @@ def test_reverseList():
     
 def test_containDuplicates(): 
     assert challanges.containsDuplicate([1,1,1,2,4]) == True 
-    
+
+
+def test_containsNearbyDuplicate(): 
+    assert challanges.containsNearbyDuplicate([1,2,3,1], 3) == True    
     
     

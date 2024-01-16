@@ -576,3 +576,13 @@ def reverseList( head: Optional[ListNode]) -> Optional[ListNode]:
 def containsDuplicate(nums: List[int]) -> bool: 
     no_repeats = len(set(nums))
     return no_repeats < len(nums)
+
+def containsNearbyDuplicate(nums: List[int], k: int) -> bool: 
+    d = {}
+
+    for i, n in enumerate(nums): 
+        if n in d and abs(i - d[n]) <= k: 
+            return True
+        else: 
+            d[n] = i
+    return False
