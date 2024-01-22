@@ -356,6 +356,17 @@ def test_containDuplicates():
 
 
 def test_containsNearbyDuplicate(): 
-    assert challanges.containsNearbyDuplicate([1,2,3,1], 3) == True    
+    assert challanges.containsNearbyDuplicate([1,2,3,1], 3) == True   
+
+
+def test_countNodes(): 
+        root = challanges.TreeNode(1)
+        root.left = challanges.TreeNode(2)
+        root.right = challanges.TreeNode(3)
+        root.left.left = challanges.TreeNode(4)
+        root.left.right = challanges.TreeNode(5)
+        root.right.left = challanges.TreeNode(6)
+
+        assert challanges.countNodes(root) == 6
     
     

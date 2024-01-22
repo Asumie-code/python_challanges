@@ -586,3 +586,26 @@ def containsNearbyDuplicate(nums: List[int], k: int) -> bool:
         else: 
             d[n] = i
     return False
+
+
+def countNodes(root: Optional[TreeNode]) -> int: 
+    count = 0
+    current = root 
+
+    while current: 
+        if current.left is None: 
+            count += 1 
+            current = current.right
+        else: 
+            prev = current.left
+            while prev.right and prev.right != current:
+                prev = prev.right
+
+            if prev.right is None: 
+                prev.right = current 
+                current = current.left 
+            else: 
+                prev.right = None
+                count += 1 
+                current = current.right 
+    return count
