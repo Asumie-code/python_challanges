@@ -1,6 +1,7 @@
 from math import  trunc
 from random import randint
 from typing import List, Optional
+from queue import Queue
 
 def roman_to_int(s):
     roman_num = s
@@ -609,3 +610,32 @@ def countNodes(root: Optional[TreeNode]) -> int:
                 count += 1 
                 current = current.right 
     return count
+
+
+
+
+class MyStack:
+    def __init__(self):
+        self.q = Queue()
+        self.topp = -1
+
+    def push(self, x):
+        self.q.put(x)
+        self.topp = x
+        size = self.q.qsize()
+        while size > 1:
+            front = self.q.get()
+            self.q.put(front)
+            size -= 1
+
+    def pop(self):
+        remo = self.q.get()
+        if not self.q.empty():
+            self.topp = self.q.queue[0]
+        return remo
+
+    def top(self):
+        return self.topp
+
+    def empty(self):
+        return self.q.empty()

@@ -368,5 +368,16 @@ def test_countNodes():
         root.right.left = challanges.TreeNode(6)
 
         assert challanges.countNodes(root) == 6
+
+
+def test_MyStack(): 
+    s = challanges.MyStack() 
+    assert s.empty() == True
+    s.push(2)
+    s.push(3)
+    assert s.empty() == False
+    assert s.top() == 3 
+    assert s.pop() == 3
+    assert s.top() == 2
     
     
