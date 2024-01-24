@@ -639,3 +639,17 @@ class MyStack:
 
     def empty(self):
         return self.q.empty()
+
+def invertTree(root: Optional[TreeNode]) -> Optional[TreeNode]:
+
+    if root == None: return
+    else: 
+        temp = root 
+
+        invertTree(root.left)
+        invertTree(root.right)
+
+        temp = root.left
+        root.left = root.right
+        root.right = temp
+    return root

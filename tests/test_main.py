@@ -380,4 +380,17 @@ def test_MyStack():
     assert s.pop() == 3
     assert s.top() == 2
     
+
+
+
+def test_invertTree(): 
+        root = challanges.TreeNode(1)
+        root.left = challanges.TreeNode(2)
+        root.right = challanges.TreeNode(3)
+
+        root_invert = challanges.invertTree(root)
+
+        assert root.left.val == 3 
+        assert root.right.val == 2
+
     
