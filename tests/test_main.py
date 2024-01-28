@@ -393,4 +393,7 @@ def test_invertTree():
         assert root.left.val == 3 
         assert root.right.val == 2
 
+
+def test_summaryRanges(): 
+    assert challanges.summaryRanges([0,1,2,4,5,7]) == ["0->2","4->5","7"]
     
