@@ -671,5 +671,8 @@ def summaryRanges(nums: List[int]) -> List[str]:
         i += 1
 
     return ans
-        
+         
+
+def isPowerOfTwo(n: int) -> bool: 
+    return (n and (not(n & (n - 1))))
     

@@ -396,4 +396,9 @@ def test_invertTree():
 
 def test_summaryRanges(): 
     assert challanges.summaryRanges([0,1,2,4,5,7]) == ["0->2","4->5","7"]
+
+
+def test_isPowerOfTwo(): 
+    assert challanges.isPowerOfTwo(4) == True  
+    assert challanges.isPowerOfTwo(3) == False 
     
