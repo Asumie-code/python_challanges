@@ -402,3 +402,9 @@ def test_isPowerOfTwo():
     assert challanges.isPowerOfTwo(4) == True  
     assert challanges.isPowerOfTwo(3) == False 
     
+def test_isPalindrome_lis(): 
+    headA = challanges.ListNode(1)
+    headA.next = challanges.ListNode(2)
+    headA.next.next = challanges.ListNode(1)
+
+    assert challanges.isPalindrome_Lis(headA) == True

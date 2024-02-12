@@ -1,5 +1,0 @@
-setup.py
-coding_challanges.egg-info/PKG-INFO
-coding_challanges.egg-info/SOURCES.txt
-coding_challanges.egg-info/dependency_links.txt
-coding_challanges.egg-info/top_level.txt
