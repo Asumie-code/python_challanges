@@ -711,3 +711,11 @@ def isPalindrome_Lis(head: Optional[ListNode]) -> bool:
         if fast.val != slow.val: return False
         fast, slow = fast.next, slow.next
     return True
+
+
+def isAnagram(s: str, t: str) -> bool:
+    lisS = list(s)
+    lisT = list(t)
+    lisS.sort()
+    lisT.sort() 
+    return lisS == lisT

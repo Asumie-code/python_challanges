@@ -408,3 +408,6 @@ def test_isPalindrome_lis():
     headA.next.next = challanges.ListNode(1)
 
     assert challanges.isPalindrome_Lis(headA) == True
+
+def test_isAnagram(): 
+    assert challanges.isAnagram('listen', 'silent') == True
